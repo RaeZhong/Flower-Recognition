@@ -1,0 +1,93 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "花语识界",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "花语识界",
+				"navigationBarBackgroundColor": "#229453",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/personal/personal",
+			"style": {
+				"navigationBarTitleText": "花语识界",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#229453",
+				"navigationBarTextStyle": "white"
+			}
+
+		}, {
+			"path": "pages/analysis/analysis",
+			"style": {
+				"navigationBarTitleText": "花语识界",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#229453",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/ai/ai",
+			"style": {
+				"navigationBarTitleText": "花语识界",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#229453",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "/pages/personal/service/service",
+			"style": {
+				"navigationBarTitleText": "AI聊天室",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#229453",
+				"navigationBarTextStyle": "white"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "花卉识别",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"selectedColor": "#229453",
+		"borderStyle": "white",
+		"fontSize": "24rpx",
+		"list": [{
+			"pagePath": "pages/main/main",
+			"text": "首页",
+			"iconPath": "static/home.png",
+			"selectedIconPath": "static/hones.png"
+		}, {
+			"pagePath": "pages/ai/ai",
+			"text": "识花",
+			"iconPath": "static/search.png",
+			"selectedIconPath": "static/searchs.png"
+		}, {
+			"pagePath": "pages/analysis/analysis",
+			"text": "博物馆",
+			"iconPath": "static/library.png",
+			"selectedIconPath": "static/librarys.png"
+		}, {
+			"pagePath": "pages/personal/personal",
+			"text": "个人中心",
+			"iconPath": "static/personnal.png",
+			"selectedIconPath": "static/personnals.png"
+		}]
+	}
+}
