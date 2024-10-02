@@ -46,16 +46,16 @@
 				"navigationBarBackgroundColor": "#229453",
 				"navigationBarTextStyle": "white"
 			}
-		},
-		{
-			"path": "/pages/personal/service/service",
-			"style": {
-				"navigationBarTitleText": "AI聊天室",
-				"enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#229453",
-				"navigationBarTextStyle": "white"
-			}
 		}
+        ,{
+            "path" : "pages/index/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "花界识语",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

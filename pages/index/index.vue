@@ -13,10 +13,15 @@
 					<input :password="showPassword" v-model="password" placeholder="请输入密码" />
 					<uni-icons :type="iconType" @click="changeShow"></uni-icons>
 				</view>
-
 			</view>
 
-			<view class="loginButton" @click="enter">
+			<view class="login-to-register">
+				<text>没有账号？</text>
+				<text @click="toRegister">去注册</text>
+			</view>
+
+
+			<view class="loginButton" @click="navigateTo('/pa')">
 				<uni-icons class="buttonIcon" type="right" color="white"></uni-icons>
 			</view>
 		</view>
@@ -40,13 +45,18 @@
 			},
 			enter() {
 				if (this.username != "" && this.password != "") {
-					sessionStorage.setItem('userInfo',this.username);
+					sessionStorage.setItem('userInfo', this.username);
 					uni.switchTab({
 						url: '/pages/main/main',
 					})
 				} else {
 					alert("用户名或密码错误！")
 				}
+			},
+			toRegister() {
+				uni.navigateTo({
+					url: '/pages/index/register/register',
+				})
 			}
 		}
 	}
@@ -59,8 +69,8 @@
 
 	.logo {
 		width: 600rpx;
-		height:300rpx;
-		position:relative;
+		height: 300rpx;
+		position: relative;
 		right: 90rpx;
 	}
 
@@ -85,6 +95,18 @@
 		height: 84rpx;
 		align-items: center;
 		padding: 0 24rpx;
+	}
+
+	.login-to-register {
+		text-align: center;
+	}
+
+	.login-to-register text:first-child {
+		color: dimgray;
+	}
+
+	.login-to-register text:last-child {
+		color: #ffffff;
 	}
 
 	.loginButton {
